@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Aida Diah Indriyani</title>
+    <!-- Memuat Tailwind CSS CDN untuk styling yang cepat dan responsif -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Konfigurasi Font dan Warna Kustom -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'navy-dark': '#0f172a', // Slate-900 mendekati navy gelap
+                        'navy-accent': '#374151', // Gray-700
+                        'navy-primary': '#4f46e5', // Indigo-600, warna aksen biru navy
+                        'navy-light': '#a5b4fc', // Indigo-300
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <!-- Menggunakan font Inter dari Google Fonts -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+    </style>
+</head>
+<body class="bg-navy-dark text-white font-sans antialiased">
+
+    <!-- Navbar/Header -->
+    <header class="sticky top-0 z-50 bg-navy-dark/95 backdrop-blur-sm shadow-lg">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo/Nama -->
+                <div class="flex-shrink-0">
+                    <a href="#home" class="text-xl font-bold text-navy-light tracking-wide hover:text-white transition duration-300">Aida.dev</a>
+                </div>
+                <!-- Navigasi Desktop -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#pendidikan" class="text-white hover:text-navy-light transition duration-300">Pendidikan</a>
+                    <a href="#keahlian" class="text-white hover:text-navy-light transition duration-300">Keahlian</a>
+                    <a href="#proyek" class="text-white hover:text-navy-light transition duration-300">Proyek</a>
+                    <a href="#kontak" class="text-white hover:text-navy-light transition duration-300">Kontak</a>
+                </nav>
+                <!-- Tombol Menu Mobile -->
+                <button id="mobile-menu-button" class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-navy-light" aria-label="Toggle Menu">
+                    <!-- Icon Hamburger (SVG Inline) -->
+                    <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Menu Mobile (Tersembunyi secara default) -->
+        <div id="mobile-menu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#pendidikan" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-navy-accent">Pendidikan</a>
+                <a href="#keahlian" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-navy-accent">Keahlian</a>
+                <a href="#proyek" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-navy-accent">Proyek</a>
+                <a href="#kontak" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-navy-accent">Kontak</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto">
+
+        <!-- Bagian 1: Beranda (Hero Section) -->
+        <section id="home" class="py-24 md:py-36 text-center px-4">
+            <div class="max-w-3xl mx-auto">
+                <!-- Foto Profil Placeholder (Ganti dengan foto Anda) -->
+                <div class="mb-6 mx-auto w-32 h-32 bg-gray-600 rounded-full flex items-center justify-center border-4 border-navy-primary shadow-xl">
+                    <span class="text-3xl font-bold">A I</span>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-extrabold mb-4 leading-tight">
+                    Halo, Saya <span class="text-navy-primary">Aida Diah Indriyani</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-400 mb-8">
+                    Seorang <span class="font-semibold text-navy-light">Pelajar</span> yang antusias dalam bidang Akuntansi dan Pengembangan Diri.
+                </p>
+                <a href="#pendidikan" class="inline-block px-8 py-3 bg-navy-primary text-white font-semibold rounded-lg shadow-lg hover:bg-indigo-700 transition duration-300 transform hover:scale-105">
+                    Lihat Profil Saya
+                </a>
+            </div>
+        </section>
+
+        <!-- Bagian 2: Pendidikan & Latar Belakang -->
+        <section id="pendidikan" class="py-16 md:py-24 bg-navy-accent/50 rounded-xl shadow-2xl mx-4 sm:mx-0 mb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold border-b-4 border-navy-primary inline-block pb-1">Riwayat Pendidikan</h2>
+            </div>
+
+            <div class="max-w-2xl mx-auto px-6">
+                <!-- Detail Pendidikan -->
+                <div class="bg-navy-accent p-6 rounded-lg shadow-lg transition duration-300 hover:shadow-navy-primary/30 hover:ring-2 ring-navy-primary">
+                    <h3 class="text-2xl font-semibold text-navy-light">SMK Dewi Sartika</h3>
+                    <p class="text-lg font-medium text-white mt-1">Jurusan: Akuntansi Keuangan Lembaga (AKL)</p>
+                    <p class="text-gray-400 mt-2 italic">
+                        Fokus pada pembukuan, laporan keuangan, dan administrasi bisnis. Membangun dasar yang kuat dalam literasi keuangan.
+                    </p>
+                </div>
+
+                <!-- Bagian Status -->
+                <div class="mt-8 text-center p-6 bg-navy-dark rounded-lg border border-navy-accent">
+                    <p class="text-lg text-gray-300">
+                        Saat ini berstatus sebagai <span class="text-navy-primary font-bold">PELAJAR</span> yang sedang aktif mencari pengalaman dan siap belajar hal baru.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian 3: Keahlian (Skills) -->
+        <section id="keahlian" class="py-16 md:py-24 px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold border-b-4 border-navy-primary inline-block pb-1">Keahlian</h2>
+                <p class="text-gray-400 mt-4">Keahlian teknis dan non-teknis yang telah saya pelajari.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+                <!-- Skill 1: Akuntansi -->
+                <div class="p-4 bg-navy-accent rounded-lg text-center shadow-md hover:bg-indigo-700 transition duration-300">
+                    <span class="text-3xl mb-2 block" role="img" aria-label="Book Icon">📊</span>
+                    <p class="font-semibold">Akuntansi Dasar</p>
+                    <p class="text-sm text-gray-400">Jurnal & Laporan Keuangan</p>
+                </div>
+                <!-- Skill 2: Microsoft Excel -->
+                <div class="p-4 bg-navy-accent rounded-lg text-center shadow-md hover:bg-indigo-700 transition duration-300">
+                    <span class="text-3xl mb-2 block" role="img" aria-label="Spreadsheet Icon">📈</span>
+                    <p class="font-semibold">Microsoft Excel</p>
+                    <p class="text-sm text-gray-400">Pengolahan Data</p>
+                </div>
+                <!-- Skill 3: Komunikasi -->
+                <div class="p-4 bg-navy-accent rounded-lg text-center shadow-md hover:bg-indigo-700 transition duration-300">
+                    <span class="text-3xl mb-2 block" role="img" aria-label="Chat Icon">🗣️</span>
+                    <p class="font-semibold">Komunikasi</p>
+                    <p class="text-sm text-gray-400">Presentasi & Interpersonal</p>
+                </div>
+                <!-- Skill 4: Kerja Tim -->
+                <div class="p-4 bg-navy-accent rounded-lg text-center shadow-md hover:bg-indigo-700 transition duration-300">
+                    <span class="text-3xl mb-2 block" role="img" aria-label="Team Icon">🤝</span>
+                    <p class="font-semibold">Kerja Tim</p>
+                    <p class="text-sm text-gray-400">Kolaborasi Efektif</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian 4: Proyek (Projects) -->
+        <section id="proyek" class="py-16 md:py-24 px-4 bg-navy-accent/50 rounded-xl shadow-2xl mx-4 sm:mx-0 mb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold border-b-4 border-navy-primary inline-block pb-1">Proyek & Karya</h2>
+                <p class="text-gray-400 mt-4">Dokumentasikan tugas sekolah, magang, atau proyek pribadi Anda di sini.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Proyek Placeholder 1 -->
+                <div class="bg-navy-dark p-6 rounded-lg shadow-xl border border-navy-accent hover:border-navy-primary transition duration-300">
+                    <h3 class="text-xl font-semibold text-navy-light mb-2">Laporan Kasus AKL</h3>
+                    <p class="text-gray-400 text-sm mb-4">Proyek studi kasus penyusunan laporan keuangan lembaga non-profit.</p>
+                    <a href="#" class="text-navy-primary hover:text-navy-light font-medium text-sm">Lihat Detail &rarr;</a>
+                </div>
+                <!-- Proyek Placeholder 2 -->
+                <div class="bg-navy-dark p-6 rounded-lg shadow-xl border border-navy-accent hover:border-navy-primary transition duration-300">
+                    <h3 class="text-xl font-semibold text-navy-light mb-2">Aplikasi Pembukuan Sederhana</h3>
+                    <p class="text-gray-400 text-sm mb-4">Penggunaan MS Excel/Google Sheets untuk pembukuan usaha kecil.</p>
+                    <a href="#" class="text-navy-primary hover:text-navy-light font-medium text-sm">Lihat Detail &rarr;</a>
+                </div>
+                <!-- Proyek Placeholder 3 -->
+                <div class="bg-navy-dark p-6 rounded-lg shadow-xl border border-navy-accent hover:border-navy-primary transition duration-300">
+                    <h3 class="text-xl font-semibold text-navy-light mb-2">Kegiatan Ekstrakurikuler</h3>
+                    <p class="text-gray-400 text-sm mb-4">Keterlibatan dalam OSIS atau kegiatan lain yang menunjukkan leadership.</p>
+                    <a href="#" class="text-navy-primary hover:text-navy-light font-medium text-sm">Lihat Detail &rarr;</a>
+                </div>
+            </div>
+            <div class="text-center mt-10">
+                <a href="#" class="inline-block px-6 py-2 border border-navy-primary text-navy-light rounded-lg hover:bg-navy-primary hover:text-white transition duration-300">
+                    Semua Proyek
+                </a>
+            </div>
+        </section>
+
+        <!-- Bagian 5: Kontak -->
+        <section id="kontak" class="py-16 md:py-24 px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold border-b-4 border-navy-primary inline-block pb-1">Hubungi Saya</h2>
+                <p class="text-gray-400 mt-4">Mari terhubung! Saya terbuka untuk peluang magang atau kolaborasi proyek sekolah.</p>
+            </div>
+            <div class="max-w-xl mx-auto bg-navy-accent p-8 rounded-xl shadow-2xl">
+                <div class="space-y-4">
+                    <!-- Email Placeholder -->
+                    <div class="flex items-center space-x-3">
+                        <span class="text-navy-light text-2xl" role="img" aria-label="Mail Icon">📧</span>
+                        <p class="text-white">aida.diah.indriyani@emailku.com</p>
+                    </div>
+                    <!-- Telepon Placeholder -->
+                    <div class="flex items-center space-x-3">
+                        <span class="text-navy-light text-2xl" role="img" aria-label="Phone Icon">📞</span>
+                        <p class="text-white">+62 812-XXXX-XXXX (Ganti dengan nomor Anda)</p>
+                    </div>
+                    <!-- Alamat/Lokasi Placeholder -->
+                    <div class="flex items-center space-x-3">
+                        <span class="text-navy-light text-2xl" role="img" aria-label="Location Icon">📍</span>
+                        <p class="text-white">SMK Dewi Sartika, Jakarta</p>
+                    </div>
+                </div>
+                <!-- Link Media Sosial Placeholder -->
+                <div class="flex justify-center space-x-6 mt-8">
+                    <a href="#" class="text-gray-400 hover:text-navy-primary transition duration-300 text-3xl" aria-label="Instagram">📸</a>
+                    <a href="#" class="text-gray-400 hover:text-navy-primary transition duration-300 text-3xl" aria-label="LinkedIn">🔗</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-20 py-8 border-t border-gray-700 text-center text-gray-400 bg-navy-dark">
+        <p>&copy; 2024 Aida Diah Indriyani. Dibuat dengan semangat dan Tailwind CSS.</p>
+    </footer>
+
+    <!-- JavaScript untuk Fungsionalitas Website -->
+    <script>
+        // Mendapatkan referensi ke tombol menu dan menu mobile
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        // Fungsi untuk menoggel tampilan menu mobile
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Menutup menu mobile saat salah satu tautan diklik (untuk smooth scrolling)
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                // Mengambil ID target dan melakukan scroll
+                const targetId = link.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 64, // Kurangi tinggi header (16*4 = 64px)
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Implementasi smooth scrolling untuk navigasi desktop
+        document.querySelectorAll('header nav a').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 64, // Kurangi tinggi header
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Tambahan: Smooth scroll untuk tombol "Lihat Profil Saya" di Hero
+        document.querySelector('#home a').addEventListener('click', function (e) {
+             e.preventDefault();
+             const targetId = this.getAttribute('href').substring(1);
+             const targetElement = document.getElementById(targetId);
+             if (targetElement) {
+                 window.scrollTo({
+                     top: targetElement.offsetTop - 64,
+                     behavior: 'smooth'
+                 });
+             }
+         });
+    </script>
+</body>
+</html>
